@@ -12,6 +12,7 @@ async function bootstrap() {
         url: 'localhost:5000',
         package: 'first_grpc',
         protoPath: [join(__dirname, 'orders', 'proto', 'orders.proto')],
+        loader: { keepCase: true },
       },
     },
   );

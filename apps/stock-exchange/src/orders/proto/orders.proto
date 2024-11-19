@@ -9,7 +9,7 @@ service OrderService{
 }
 
 enum Status {
-  STATUS_PENDING = 0;
+  PENDING = 0;
 }
 
 message Order {
