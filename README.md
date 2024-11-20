@@ -24,4 +24,4 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-1:10min
+1:56min
