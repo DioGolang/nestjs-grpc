@@ -1,0 +1,16 @@
+### GET request to example server
+GET http://localhost:3000/orders?account_id=1234
+
+### GET request to example server
+GET http://localhost:3000/orders/673cf27c1bf933ca0336f7d5
+
+
+### GET request to example server
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "account_id": "1234",
+  "asset_id": "xpto",
+  "quantity": 100
+}

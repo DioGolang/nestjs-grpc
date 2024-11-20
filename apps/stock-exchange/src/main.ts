@@ -2,6 +2,8 @@ import { NestFactory } from '@nestjs/core';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 import { StockExchangeModule } from './stock-exchange.module';
+import { ValidationPipe } from '@nestjs/common';
+import { ValidationExceptionFilter } from './validation-exception.filter';
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(
@@ -16,6 +18,8 @@ async function bootstrap() {
       },
     },
   );
+  app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalFilters(new ValidationExceptionFilter());
   await app.listen();
 }
 bootstrap();

@@ -15,7 +15,7 @@ export class OrdersController {
         order_id: order.id.toString(),
         account_id: order.account_id,
         asset_id: order.asset_id,
-        quality: order.quantity,
+        quantity: order.quantity,
         status: order.status,
       },
     };
